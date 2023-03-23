@@ -253,7 +253,7 @@ background: #fff;
   background-position: center;
 }
 
-/*  */
+/* Small circle logos section ends */
 
 /* About us section begins */
 
@@ -708,4 +708,18 @@ section {
     font-size: 1.3rem;
     padding: 1rem;
   }
+}
+
+/* Reveal effect */
+.reveal {
+  position: relative;
+  transform: translateY();
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  position: relative;
+  transform: translateY();
+  opacity: 1;
 }
