@@ -43,6 +43,39 @@ var swiper = new Swiper(".home-slider", {
     disableOnInteraction: false,
   },
 });
+//images/gym-equipment.jpeg
+//images/cardio-equipment.jpeg
+//images/cardio-equipment.jpeg
+// for about us section
+
+const btn1 = document.getElementById("btn1");
+const btn2 = document.getElementById("btn2");
+const btn3 = document.getElementById("btn3");
+
+const imageContainer = document.querySelector(".image-container");
+const image = imageContainer.querySelector("img");
+
+document.getElementById("btn1").setAttribute("selected", "");
+
+// Add event listeners to the buttons
+btn1.addEventListener("click", () => {
+  image.src = "images/gym-equipment.jpeg";
+  document.querySelectorAll("button").forEach(btn => btn.classList.remove("selected"));
+
+});
+
+
+btn2.addEventListener("click", () => {
+  image.src = "images/cardio-equipment.jpeg";
+  document.querySelectorAll("button").forEach(btn => btn.classList.remove("selected"));
+
+});
+
+btn3.addEventListener("click", () => {
+  image.src = "images/solarium.jpg";
+  document.querySelectorAll("button").forEach(btn => btn.classList.remove("selected"));
+
+});
 
 // for feature section
 
@@ -69,25 +102,55 @@ var swiper = new Swiper(".feature-slider", {
   },
 });
 
+
+// var swiper = new Swiper(".trainer-slider", {
+//   spaceBetween: 20,
+//   grabCursor: true,
+//   loop: true,
+//   centeredSlides: true,
+
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 1,
+//     },
+//     768: {
+//       slidesPerView: 2,
+//     },
+//     991: {
+//       slidesPerView: 3,
+//     },
+//   },
+// });
+
 // for trainers section
 
 var swiper = new Swiper(".trainer-slider", {
-  spaceBetween: 20,
+  effect: "coverflow",
   grabCursor: true,
-  loop: true,
   centeredSlides: true,
-
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    991: {
-      slidesPerView: 3,
-    },
+  initialSlide:  1,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
   },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+      },
 });
 
 
