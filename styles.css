@@ -468,7 +468,90 @@ background: #fff;
   color: #808080;
 }
 
+/* Lose weight section begins */
 
+.loseweight {
+  padding-inline: 0%;
+  padding-bottom: 8rem;
+}
+
+.loseweight .home-slider .box {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/The-Science-Behind-How-Weight-Lo.jpg');
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+
+.loseweight .home-slider .box .content {
+  text-align: left;
+  max-width: 70rem;
+  position: absolute;
+  top: 20%;
+  right: 52%;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.loseweight .home-slider .box .content h3 {
+  font-size: 4.5rem;
+  color: #62d9ddbd;
+  text-transform: uppercase;
+  transition-delay: 0.2s;
+}
+
+.loseweight .home-slider .box .content h4 {
+  font-size: 2.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  transition-delay: 0.2s; 
+  margin-bottom: 4rem;
+}
+
+.loseweight .home-slider .box .content p {
+  font-size: 1.7rem;
+  color: #eee;
+  padding: 1rem 0;
+  transition-delay: 0.4s;
+  text-transform: none;
+}
+
+.loseweight .home-slider .box .button .btn-1 {
+  background: var(--main-color);
+  color: #fff;
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  width: 21rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loseweight .home-slider .box .button .btn-1:hover {
+  background: #fff;
+  color: var(--main-color);
+}
+
+.loseweight .home-slider .box .button {
+  transition-delay: 0.6s;
+}
+
+.loseweight .home-slider .box .content > * {
+  transform: translateY(2rem);
+  opacity: 0;
+}
+
+.loseweight .home-slider .swiper-slide-active .content > * {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Lose weight section ends */
 
 /* Trainer section ends */
 
@@ -565,7 +648,7 @@ background: #fff;
 
 /* Media queries section */
 
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
   .home .home-slider .box .content {
     position: absolute;
     top: 30%;
@@ -579,7 +662,16 @@ background: #fff;
   }
 }
 
-@media (max-width: 991px){
+/* For extra responsivness */
+
+@media (max-width: 1200px){
+  .loseweight .home-slider .box .content{
+    top: 10%;
+    right: 35%;
+  }
+}
+
+@media (max-width: 1024px){
   html{
     font-size: 65%;
   }
@@ -646,11 +738,30 @@ section {
   align-items: center;
 }
 
+.loseweight .home-slider .box .content {
+  padding-left: 0;
+  text-align: center;
+  position: static;
+}
+
+.loseweight .home-slider .box .content h3 {
+  font-size: 3.3rem;
+}
+
+.loseweight .home-slider .box .content h4 {
+  font-size: 2.4rem;
+}
+
+.loseweight .home-slider .box .content p {
+  font-size: 1.6rem;
+  margin-inline: 4rem;
+}
+
 }
 
 /* For maxwidth 768px */
 
-@media (max-width: 768px){
+@media (max-width: 480px){
   #menu-btn {
     display: inline-block;
   }
@@ -694,6 +805,25 @@ section {
     justify-items: center;
     align-items: center;
   }
+
+  .loseweight .home-slider .box .content {
+    padding-left: 0;
+    text-align: center;
+    position: static;
+  }
+  
+  .loseweight .home-slider .box .content h3 {
+    font-size: 3.3rem;
+  }
+  
+  .loseweight .home-slider .box .content h4 {
+    font-size: 2.4rem;
+  }
+  
+  .loseweight .home-slider .box .content p {
+    font-size: 1.6rem;
+    margin-inline: 4rem;
+  }
 }
 
 /* For maxwidth 450px */
@@ -722,4 +852,14 @@ section {
   position: relative;
   transform: translateY();
   opacity: 1;
+}
+
+/* Google map thingy */
+
+.map-wrapper {
+  max-width: 1920px;
+}
+
+.googlemap {
+  width: 100%;
 }
