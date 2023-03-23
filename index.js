@@ -80,20 +80,19 @@ document.getElementById("btn1").setAttribute("selected", "");
 
 // Add event listeners to the buttons
 btn1.addEventListener("click", () => {
-  image.src = "images/gym-equipment.jpeg";
+  image.src = "images/1.jpeg";
   document.querySelectorAll("button").forEach(btn => btn.classList.remove("selected"));
 
 });
 
-
 btn2.addEventListener("click", () => {
-  image.src = "images/cardio-equipment.jpeg";
+  image.src = "images/2.jpeg";
   document.querySelectorAll("button").forEach(btn => btn.classList.remove("selected"));
 
 });
 
 btn3.addEventListener("click", () => {
-  image.src = "images/solarium.jpg";
+  image.src = "images/3.jpeg";
   document.querySelectorAll("button").forEach(btn => btn.classList.remove("selected"));
 
 });
